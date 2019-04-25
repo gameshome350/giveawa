@@ -1,5 +1,6 @@
 ﻿ 
 const Discord = require('discord.js');
+const moment = require('moment');
 const client = new Discord.Client();
 const prefix = "g!"
  
@@ -28,17 +29,14 @@ client.on('ready', () => {
   console.log(`Users! [ " ${client.users.size} " ]`);
   console.log('=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=')
   console.log(`channels! [ " ${client.channels.size} " ]`);
-  console.log('=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=')
- 
-client.user.setGame("under test", "https://www.twitch.tv/alpha");
-});
+  
 
 
 
  
  
  var prefix = "g!"
-const moment = require('moment');
+
 client.on('message',async message => {
   var time = moment().format('Do MMMM YYYY , hh:mm');
   var room;
